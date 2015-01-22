@@ -13,7 +13,7 @@ Create a `Dockerfile` in your Ruby app project
 
 ```
 FROM quay.io/wantedly/python:2.7
-CMD ["./your-daemon-or-script.rb"]
+CMD ["./your-daemon-or-script.py"]
 ```
 
 ## HOW TO DEVELOP
