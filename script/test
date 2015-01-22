@@ -16,7 +16,7 @@ cd "${BASE_DIRECTORY}"
 
 echo "==> Running test..."
 cd 2.7
-docker run --rm -it python python -V | grep "Python 2.7.9" > /dev/null 2>&1
+docker run --rm -it target python -V | grep "Python 2.7.9" > /dev/null 2>&1
 if test $? -eq 0
 then
   echo "    Passed :)"
