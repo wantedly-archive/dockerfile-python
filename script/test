@@ -1,0 +1,29 @@
+#!/bin/sh
+#
+# Usage: script/test
+# Description: script to run test
+#
+
+set -e
+
+# this script should be run in project root
+BASE_DIRECTORY=`pwd`
+
+echo "==> Building target..."
+cd 2.7
+docker build -t target .
+cd "${BASE_DIRECTORY}"
+
+echo "==> Running test..."
+cd 2.7
+docker run --rm -it target python -V | grep "Python 2.7.9" > /dev/null 2>&1
+if test $? -eq 0
+then
+  echo "    Passed :)"
+else
+  echo "    Failed :("
+  exit 1
+fi
+cd "${BASE_DIRECTORY}"
+
+exit 0
