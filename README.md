@@ -9,7 +9,7 @@ For more information about this, please see [official one's README](https://gith
 * [`2.7`](2.7/Dockerfile)
 
 ## HOW TO USE
-Create a `Dockerfile` in your Ruby app project
+Create a `Dockerfile` in your Python app project
 
 ```
 FROM quay.io/wantedly/python:2.7
